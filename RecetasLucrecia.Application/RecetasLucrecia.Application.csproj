@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Contacts\" />
+    <Folder Include="Employees\UseCases\DeleteEmployee\" />
+    <Folder Include="Employees\UseCases\GetEmployeesList\" />
+    <Folder Include="Employees\UseCases\UpdateEmployee\" />
+    <Folder Include="Events\" />
+    <Folder Include="Regions\" />
+    <Folder Include="Recipes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RecetasLucrecia.Domain\RecetasLucrecia.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
