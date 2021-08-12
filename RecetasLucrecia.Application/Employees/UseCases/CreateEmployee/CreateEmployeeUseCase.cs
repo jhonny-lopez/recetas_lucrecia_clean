@@ -12,13 +12,8 @@ namespace RecetasLucrecia.Application.Employees.UseCases.CreateEmployee
     {
         private readonly IRepository<Employee> _repository;
         private readonly IUnitOfWork _unitOfWork;
-
-        private IOutputPort _outputPort;
-
-        public void SetOutputPort(IOutputPort port)
-        {
-            _outputPort = port;
-        }
+        
+        public IOutputPort OutputPort { private get; set; }
 
         public CreateEmployeeUseCase(IRepository<Employee> repository, IUnitOfWork unitOfWork)
         {
@@ -40,11 +35,11 @@ namespace RecetasLucrecia.Application.Employees.UseCases.CreateEmployee
 
                 await _unitOfWork.SaveAsync();
 
-                _outputPort.Ok(employee.Id);
+                OutputPort.Ok(employee.Id);
             }
             catch (Exception ex)
             {
-                _outputPort.NotValid(ex.Message);
+                OutputPort.NotValid(ex.Message);
             }
         }
     }

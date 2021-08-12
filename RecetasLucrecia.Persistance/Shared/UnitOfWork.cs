@@ -23,7 +23,7 @@ namespace RecetasLucrecia.Persistance.Shared
 
         public void Save()
         {
-            _dbContext.Save();
+            _dbContext.SaveChanges();
         }
 
         public async Task SaveAsync()

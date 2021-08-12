@@ -8,7 +8,6 @@
     <Folder Include="Contacts\" />
     <Folder Include="Employees\UseCases\DeleteEmployee\" />
     <Folder Include="Employees\UseCases\GetEmployeesList\" />
-    <Folder Include="Employees\UseCases\UpdateEmployee\" />
     <Folder Include="Events\" />
     <Folder Include="Regions\" />
     <Folder Include="Recipes\" />

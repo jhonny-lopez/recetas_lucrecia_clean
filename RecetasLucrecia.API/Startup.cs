@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using RecetasLucrecia.Application.Contracts.Persistance;
 using RecetasLucrecia.Application.Employees.UseCases.CreateEmployee;
 using RecetasLucrecia.Application.Employees.UseCases.GetEmployeeById;
+using RecetasLucrecia.Application.Employees.UseCases.UpdateEmployee;
 using RecetasLucrecia.Persistance;
 using RecetasLucrecia.Persistance.Shared;
 using System;
@@ -41,6 +42,7 @@ namespace RecetasLucrecia.API
 
             services.AddTransient(typeof(CreateEmployeeUseCase), typeof(CreateEmployeeUseCase));
             services.AddTransient(typeof(GetEmployeeByIdUseCase), typeof(GetEmployeeByIdUseCase));
+            services.AddTransient(typeof(UpdateEmployeeUseCase), typeof(UpdateEmployeeUseCase));
 
             services.AddControllers();
         }
